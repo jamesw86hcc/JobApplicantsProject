@@ -16,10 +16,10 @@ public class Main {
     public static void main(String[] args) {
         try {
             Scanner readFile = new Scanner(Paths.get("applicants.csv"));
-            ArrayList<String[]> x = getFileData(readFile);
+            ArrayList<String[]> applicants = getFileData(readFile);
             Formatter output = new Formatter("emails.txt");
 
-            for (String[] applicant : x){
+            for (String[] applicant : applicants){
 
                 try {
                     String email = composeEmail(applicant);
